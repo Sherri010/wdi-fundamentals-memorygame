@@ -13,7 +13,8 @@ nav a:hover {background:#ee5f3c; }
 .name { color: #fff;}
 
 .board{ height: 50%;display: inline-block;margin:8%;float:left;}
-.card {height:200px;width:150px;border:solid 1px #000;background-color: #ffff00;border-radius: 10px;display:inline-block; margin:10%;}
+.card {height:200px;width:150px;border:solid 1px #000;
+	background-color: #ffff00;border-radius: 15px;display:inline-block; margin:10%;}
 .fa-heart {color:#cc0000;}
 .clearfix:after {
         visibility: hidden;
@@ -25,4 +26,4 @@ nav a:hover {background:#ee5f3c; }
       }
 
 
-.cover {width:100%;height:auto;}
+.cover {width:100%;height:auto;background:#000;}

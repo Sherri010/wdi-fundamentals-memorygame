@@ -2,25 +2,13 @@
 var card=['queen','queen','king','king','joker','joker'];
 var cardsInPlay=[];
 
-// if(cardOne === cardTwo) alert("match");
-// else alert("no match");
-
-// for(var)
-
-
-// // First up, let's create a new list item and store it in a variable.
-// var newListItem = document.createElement('li');
-
-// // Alright! Now let's update the text content of that list item.
-// newListItem.textContent = 'Feed the cat';
-
-// // And Finally...let's add that list item as a child of the ul.
-// document.getElementsByTagName('ul')[0].appendChild(newListItem);
-
 function isMatch(cardsInPlay){
-  if(cardsInPlay[0] === cardsInPlay[1]) {alert("match");}	
+	var result=document.getElementById('result');
+  if(cardsInPlay[0] === cardsInPlay[1]) { result.innerHTML="Match!";
+
+  }	
    else 
-   	alert("no match");
+    {result.innerHTML="No Match";}
 }
 
 function isTwoCards(){
@@ -40,6 +28,10 @@ function isTwoCards(){
 }
 
 function createBoard(){
+	var btn = document.getElementById('start');
+	btn.addEventListener('click',function(){
+		 document.getElementsByClassName('board')[0].classList.remove('hide');
+	});
 	var board=document.getElementById('game-board');
 
 for(var i=0; i< card.length; i++){

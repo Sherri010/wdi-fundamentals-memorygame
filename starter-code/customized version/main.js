@@ -7,15 +7,15 @@ document.getElementById('reset').addEventListener('click',resetBoard);
 
 
 
-function isMatch(cardsInPlay){
+function isMatch(cardsInPlay,el){
 	var result=document.getElementById('result');
   if(cardsInPlay[0] === cardsInPlay[1]) { result.innerHTML="Match!";
 
   }	
    else 
-    {result.innerHTML="No Match";}
-}
+    {result.innerHTML="No Match"; setTimeout(function(){el.innerHTML="<img src='back.jpg' class='coverb' alt='back side up'>";},3000);}
 
+}
 function isTwoCards(){
 	if(this.getAttribute('data-card') == 'king')
 	this.innerHTML="<img src='king.png'class='cover' alt='king'>";
@@ -27,7 +27,7 @@ function isTwoCards(){
 
 	cardsInPlay.push(this.getAttribute('data-card'));
 	if(cardsInPlay.length === 2){
-		isMatch(cardsInPlay);
+		isMatch(cardsInPlay,this);
 		cardsInPlay=[];
 	}
 }
